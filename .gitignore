@@ -1,0 +1,8 @@
+package-lock.json
+node_modules/
+/test-results/
+/reports/
+/playwright/.cache/
+playwright-report.zip
+.env
+readme.md

@@ -1,0 +1,30 @@
+{
+  "compileOnSave": true,
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2023", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      // ==== Independent ===
+      "@_common/*": ["common/*"],
+      "@_api/*": ["api/*"],
+      "@_resources/*": ["resources/*"],
+      // ==== API ===
+      "@_src_api/*": ["src/api/*"],
+      "@_fixtures_api/*": ["fixtures/api/*"],
+      // ==== UI ===
+      "@_src_ui/*": ["src/ui/*"],
+      "@_fixtures_ui/*": ["fixtures/ui/*"],
+      // ==== Globals ===
+      "@_globals/*": ["globals/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "allowJs": true
+}
