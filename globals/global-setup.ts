@@ -7,7 +7,8 @@ dotenv.config({ override: true })
 async function globalSetup(config: FullConfig): Promise<void> {
   // * Remove folder
   await new Promise((resolve) => {
-    rimraf(`./reports/allure/results`, resolve)
+    rimraf(`./allure-results`, resolve)
+    rimraf(`./allure-report`, resolve)
   })
 
   // * Get variable from playwright config

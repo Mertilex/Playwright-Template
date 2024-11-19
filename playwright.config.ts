@@ -25,7 +25,19 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html', { outputFolder: 'reports/playwright' }],
-    ['allure-playwright', { outputFolder: 'reports/allure' }],
+    /*
+      Currently resultsDir in Allure reports is ignored. 
+      This issue started occurring since version v3.0.0 and it was not yet fixed.
+      As a result Allure generates reports in root directory of the solution, regardless below setting.
+      See: 
+      https://github.com/allure-framework/allure-js/issues/1118
+      https://github.com/orgs/allure-framework/discussions/2649
+      https://allurereport.org/docs/playwright-configuration/
+
+      For more information see Obsidian notes: Playwright Template -> Known Issues -> Allure-playwright ignores resultsDir setting
+
+    */
+    ['allure-playwright', { resultsDir: 'reports/allure' }],
   ],
   //Global Setup to run before all tests
   globalSetup: `./globals/global-setup`,

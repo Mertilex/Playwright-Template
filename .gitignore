@@ -6,3 +6,5 @@ node_modules/
 playwright-report.zip
 .env
 readme.md
+allure-results/
+allure-report/
