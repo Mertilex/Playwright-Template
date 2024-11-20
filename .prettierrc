@@ -5,5 +5,8 @@
   "endOfLine": "auto",
   "trailingComma": "all",
   "bracketSpacing": true,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSameLine": true
 }
