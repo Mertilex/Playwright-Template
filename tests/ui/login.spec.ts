@@ -1,3 +1,5 @@
+// @ts-check
+
 import { customerEmail, customerPass } from '@_globals/config'
 import { expect, test } from '@playwright/test'
 import { LoginPage } from '@_src_ui/pages/login.page'
