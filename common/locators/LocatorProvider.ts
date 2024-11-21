@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test'
 import { LocatorTypes } from './locator-types'
+import { Locator } from './locator'
 
 export class LocatorProvider {
     readonly page: Page
@@ -8,10 +9,10 @@ export class LocatorProvider {
         this.page = page
       }
   
-    GetLocator(locatorStr: string, locatorType: LocatorTypes) {
-      switch(locatorType) {
+    GetLocator(locator: Locator) {
+      switch(locator.type) {
         case LocatorTypes.ByLabel: {
-          return this.page.getByLabel(locatorStr)
+          return this.page.getByLabel(locator.locatorStr)
         }
 
         case LocatorTypes.ByAltText: {
@@ -19,7 +20,7 @@ export class LocatorProvider {
         }
 
         case LocatorTypes.ByLocator: {
-          return this.page.locator(locatorStr)
+          return this.page.locator(locator.locatorStr)
         }
 
         case LocatorTypes.ByPlaceholder: {
