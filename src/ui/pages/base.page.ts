@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test'
 import { closeWelcomeBanner } from '@_src_ui/helpers/dialogue.helper'
-import { LocatorProvider } from '../../../common/locators/LocatorProvider'
+import { LocatorProvider } from '@_common/locators/LocatorProvider'
 
 export class BasePage {
   readonly page: Page

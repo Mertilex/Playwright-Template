@@ -1,5 +1,5 @@
 import { Locator } from '@_common/locators/locator'
-import { LocatorTypes } from '../../../../../common/locators/locator-types'
+import { LocatorTypes } from '@_common/locators/locator-types'
 
 export const loginPageSelectors = {
   emailInput: new Locator('#email', LocatorTypes.ByLocator),
