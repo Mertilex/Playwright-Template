@@ -4,11 +4,13 @@ import { BasePage } from '@_src_ui/pages/base.page'
 import { loginPageSelectors } from '@_src_ui/pages/selectors/login-page/login-page.selectors'
 import { waitForResponse } from '@_src_ui/helpers/wait.helper'
 import { MethodType } from '@_common/enums/api.enums'
+import { LocatorTypes } from '../../../common/locators/locator-types'
 
 export class LoginPage extends BasePage {
-  passwordInput = this.page.locator(loginPageSelectors.passwordInput)
-  loginButton = this.page.locator(loginPageSelectors.loginButton)
-  emailInput = this.page.locator(loginPageSelectors.emailInput)
+  //TODO: Add here additional params if necessary to support more complex cases like this: page.getByRole('heading', { name: 'Sign up' }) 
+  passwordInput = this.locatorProvider.GetLocator(loginPageSelectors.passwordInput.locator, LocatorTypes.ByLocator)
+  loginButton = this.locatorProvider.GetLocator(loginPageSelectors.loginButton.locator, LocatorTypes.ByLocator)
+  emailInput = this.locatorProvider.GetLocator(loginPageSelectors.emailInput.locator, LocatorTypes.ByLocator)
 
   protected url = '/#/login'
 
