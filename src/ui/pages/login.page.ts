@@ -1,7 +1,7 @@
 import { Page } from '@playwright/test'
 import { MainPage } from '@_src_ui/pages/main.page'
 import { BasePage } from '@_src_ui/pages/base.page'
-import { loginPageSelectors } from '@_src_ui/pages/login-page.selectors'
+import { loginPageSelectors } from '@_src_ui/pages/selectors/login-page/login-page.selectors'
 import { waitForResponse } from '@_src_ui/helpers/wait.helper'
 import { MethodType } from '@_common/enums/api.enums'
 
