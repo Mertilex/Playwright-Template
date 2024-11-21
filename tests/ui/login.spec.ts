@@ -7,8 +7,16 @@ import { LoginPage } from '@_src_ui/pages/login.page'
 test.describe('Login', () => {
   let loginPage: LoginPage
 
+  test.beforeAll(async ({ browser }) => {
+    test.info().annotations.push({
+      type: 'browser version',
+      description: browser.version(),
+    })
+  })
+
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page)
+    
     await loginPage.navigateToURL()
   })
 
