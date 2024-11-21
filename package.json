@@ -1,8 +1,8 @@
 {
   "name": "playwright-automation-template",
-  "version": "1.0.0",
-  "description": "Automation Boilerplate with playwright and typescript",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "Automation template with playwright and typescript",
+  "main": "",
   "scripts": {
     "lint": "npx eslint . --fix && npx prettier . --write",
     "test": "npx playwright test --project=chromium",
@@ -18,15 +18,16 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Mertilex/Playwright-Template"
   },
   "keywords": [
     "QA",
-    "template",
+    "Template",
     "Playwright",
     "TypeScript",
-    "automation",
-    "E2E"
+    "Automation",
+    "E2E",
+    "UI"
   ],
   "author": "",
   "license": "ISC",
