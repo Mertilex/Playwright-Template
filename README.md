@@ -6,12 +6,20 @@ The template comes pre-configured with essential tools and libraries, including 
 # Features
 Key features are briefly described in this paragraph.
 
+## Multiple environments support
+One of the key features of this solution is the support of an unlimited number of environments. Therefore, it is possible to execute the same test suit among all environments where it is necessary.
+The only thing that need to be adjusted in `.env` variable that contains key configuration variables that are environment specific.
+
+![image](https://github.com/user-attachments/assets/106ad46e-20b5-402b-a3da-91143028a458)
+
+
 ## Custom wait timers
 Wait handlers that are provided by Playwright are not always 100% effective. Therefore, the solution contains custom wait handles that are designed to support all cases where the standard approach fails. 
 
 For more information see waitForResponse file:
 
 ![image](https://github.com/user-attachments/assets/00c50f2a-0827-4270-9e4d-c3aeffe8315b)
+
 
 
 ## Custom reports
@@ -26,6 +34,32 @@ This feature was designed to allow you to decide whether historical reports and 
 
 If you decide to keep reports then each of them will be located in a separate ZIP file to reduce occupied space.
 
+
+
+## Predefined scripts
+Several commonly used `npm` scripts were added to the solution. Each of them can be run separately or can be combined in cascade scripts if needed. See Package.json file:
+
+![image](https://github.com/user-attachments/assets/a3e45e73-b611-4c67-9c0d-3311618cf54c)
+
+
+
+## Multiple browsers support
+By default this solution supports 3 independent browsers: `chromium` `firefox` and `webkit`.
+Each of them can be configured separately in `playwright.config.ts` file:
+
+![image](https://github.com/user-attachments/assets/d63ac197-0fb5-4faa-abde-f5fabe9384fc)
+
+On top of that, tests are designed in a way that is independent on any browser, so it is possible to have a full control on browser(s) on which the tests should be executed. Just use additional parameter while executing the tests, e.g.:
+`npx playwright test --project=chromium`
+
+
+## Ensure coding standards and formatting guidelines
+Every developer has his own style of coding and formatting. It has always been like this.
+Therefore, tools like `Prettier` and `ESlint` were added to keep consistent layout and coding standards among all files the solution.
+
+Each of them has its own configuration file where all existing rules can be adjusted to individual needs.
+
+![image](https://github.com/user-attachments/assets/45a88d5a-177b-47cd-8b7c-38a7db20fd2d)
 
 
 
